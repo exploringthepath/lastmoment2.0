@@ -1,0 +1,68 @@
+@relation student_performance
+@attribute department {IT,CS,AIML,AIDS}
+@attribute study_hours numeric
+@attribute attendance numeric
+@attribute assignment {yes,no}
+@attribute result {pass,fail}
+
+@data
+
+CS,2,50,no,fail
+CS,3,60,no,fail
+AIDS,4,65,yes,pass
+AIML,5,70,yes,pass
+AIML,6,80,yes,pass
+IT,1,40,no,fail
+AIML,7,90,yes,pass
+AIDS,2,55,no,fail
+IT,5,75,yes,pass
+AIML,3,65,yes,pass
+🧩 STEP-BY-STEP ETL USING WEKA
+🔹 STEP 1: EXTRACT
+🎯 Goal:
+
+👉 Load dataset
+
+🔧 Steps:
+Open WEKA → Explorer
+Click:
+Open file
+Select your .arff file
+🧠 Meaning:
+
+👉 Data is extracted from source
+
+🎤 Viva:
+
+Data is extracted from the ARFF file into WEKA.
+
+🔹 STEP 2: TRANSFORM
+🎯 Goal:
+
+👉 Clean / modify data
+
+🔧 What you can do (choose ANY 2–3):
+✅ 1. Discretize (numeric → categories)
+Filter → unsupervised → attribute → Discretize
+Apply
+✅ 2. Remove attribute
+Select attribute → click Remove
+✅ 3. Subset filtering
+ATT1 is "IT"
+🧠 Meaning:
+
+👉 Data is being cleaned / transformed
+
+🎤 Viva:
+
+Data transformation includes cleaning, filtering, and converting data into suitable format.
+
+🔹 STEP 3: LOAD
+🎯 Goal:
+
+👉 Save processed data
+
+🔧 Steps:
+Click:
+Save
+Save as new .arff file

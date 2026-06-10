@@ -1,0 +1,57 @@
+🔥 Assignment 1: Build Data Warehouse + Explore WEKA
+
+@relation student_performance
+
+@attribute study_hours numeric
+@attribute attendance numeric
+@attribute result {pass,fail}
+
+@data
+2,50,fail
+3,60,fail
+4,65,pass
+5,70,pass
+6,80,pass
+1,40,fail
+7,90,pass
+2,55,fail
+5,75,pass
+3,65,pass
+
+
+@relation → dataset name
+@attribute → columns
+@data → actual values
+
+Open WEKA
+Click Explorer
+Go to Preprocess tab
+Click Open file
+Select student.arff
+STEP 3: Apply a Filter:
+Click Filter
+Choose:
+unsupervised → attribute → Remove
+Click on filter name
+Enter:
+1
+(removes first attribute = study_hours)
+Click Apply
+👉 Now dataset changes!
+
+
+
+Q1: What is ARFF file?
+ARFF stands for Attribute Relation File Format and is used in WEKA to store datasets.
+
+Q2: What is relation?
+Relation represents the name of the dataset.
+
+Q3: What is attribute?
+Attribute represents a column or feature in the dataset.
+
+Q4: What is nominal data?
+Nominal data represents categorical values like pass or fail.
+
+
+In this experiment, we loaded a dataset in ARFF format into WEKA Explorer. We explored different attributes, identified numeric and nominal types, visualized their distribution, and applied preprocessing using filters.

@@ -1,0 +1,52 @@
+🚀 ASSIGNMENT 3: Naive Bayes Classification
+
+@relation student_performance
+@attribute study_hours numeric
+@attribute attendance numeric
+@attribute assignment {yes,no}
+@attribute result {pass,fail}
+
+@data
+2,50,no,fail
+3,60,no,fail
+4,65,yes,pass
+5,70,yes,pass
+6,80,yes,pass
+1,40,no,fail
+7,90,yes,pass
+2,55,no,fail
+5,75,yes,pass
+3,65,yes,pass
+
+🔹 STEP 1: Go to Classify Tab
+Click Classify
+🔹 STEP 2: Choose Algorithm
+Click Choose
+
+Select:
+
+bayes → NaiveBayes
+🔹 STEP 3: Set Class Attribute
+
+👉 VERY IMPORTANT ⚠️
+
+Bottom right → “Class”
+Select:
+result
+
+👉 (We are predicting pass/fail)
+
+🎤 Viva Answer:
+
+Class attribute is the target variable that we want to predict.
+
+🔹 STEP 4: Test Option
+
+Choose:
+
+Use training set
+
+
+🔹 STEP 5: Run Model
+
+👉 Click Start

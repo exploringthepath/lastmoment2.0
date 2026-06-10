@@ -1,0 +1,25 @@
+from itertools import combinations
+d=[[""milk,"bread"],["milk","beer"],["bread","beer"],["milk","bread","beer"]]
+
+s,c=2,0.5
+
+cnt={}
+
+for t in d:
+	for i in t+list(combinations(t,2)):
+		cnt[i]=cnt.get(i,0)+1
+print("Support: ")
+
+for k,v in cnt.items():
+	if v>=s:
+		print(k,v)
+print("Confidence: ")
+
+for a,b in combinations(["milk","bread","beer"],2):
+	x=cnt[(a,b)]/cnt[a]
+	y=cnt[(a,b)]/cnt[b]
+
+	if x>=c:
+		print(a,"-->",b,round(x,3))
+	if y>=c:
+		print(b,"-->",a,round(y,3))

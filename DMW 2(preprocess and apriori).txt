@@ -1,0 +1,66 @@
+🚀 ASSIGNMENT 2: Data Preprocessing + Association Rule Mining (Apriori)
+
+dataset:
+@relation student_analysis
+
+@attribute study_hours numeric
+@attribute attendance numeric
+@attribute assignment {yes,no}
+@attribute result {pass,fail}
+
+@data
+2,50,no,fail
+3,60,no,fail
+4,65,yes,pass
+5,70,yes,pass
+6,80,yes,pass
+1,40,no,fail
+7,90,yes,pass
+2,55,no,fail
+5,75,yes,pass
+3,65,yes,pass
+
+🔍 STEP 1: Understand the Problem
+
+ Association rules work BEST with nominal (categorical) data
+
+BUT the dataset has:
+
+study_hours ❌ numeric
+attendance ❌ numeric
+
+ So we convert them into categories (VERY IMPORTANT)
+
+ STEP 2: Convert Numeric → Nominal
+Steps:
+Click Filter
+Choose:
+unsupervised → attribute → Discretize
+
+👉 (Discretize = convert numbers into ranges)
+
+Click on filter name → set:
+- bins = 2
+
+👉 (means LOW / HIGH type grouping)
+
+Click Apply
+
+🧩 PART 2: ASSOCIATION RULE MINING
+
+
+
+🔄 STEP 4: Go to Associate Tab
+Click Associate
+⚙️ STEP 5: Select Algorithm
+
+By default you’ll see:
+
+👉 Apriori (already selected ✅)
+
+
+▶️ STEP 6: Run Algorithm
+Click Start
+Answer:
+
+Discretization is the process of converting numeric data into categorical data by creating intervals.

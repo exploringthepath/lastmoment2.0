@@ -1,0 +1,64 @@
+@relation student_performance
+@attribute department {IT,CS,AIML,AIDS}
+@attribute study_hours numeric
+@attribute attendance numeric
+@attribute assignment {yes,no}
+@attribute result {pass,fail}
+
+@data
+
+CS,2,50,no,fail
+CS,3,60,no,fail
+AIDS,4,65,yes,pass
+AIML,5,70,yes,pass
+AIML,6,80,yes,pass
+IT,1,40,no,fail
+AIML,7,90,yes,pass
+AIDS,2,55,no,fail
+IT,5,75,yes,pass
+AIML,3,65,yes,pass
+
+🧩 STEP 1: SLICE (🔪 ONE CONDITION)
+🎯 Goal:
+
+👉 Show only ONE department
+
+🔧 Steps:
+Filter → Choose
+Select:
+unsupervised → instance → SubsetByExpression
+Click filter name → write:
+ATT1 is "IT"
+Click Apply
+🧠 What happened?
+
+👉 Only IT students are shown
+
+🎤 Viva:
+
+Slice operation selects data for a single dimension.
+
+🧩 STEP 2: DICE (🎲 MULTIPLE CONDITIONS)
+
+👉 First reload dataset again (IMPORTANT)
+
+🔧 Steps:
+Same filter → SubsetByExpression
+Write:
+(ATT1 is "IT") and (ATT5 is "pass")
+Click Apply
+🧠 What happened?
+
+👉 Only IT students who passed
+
+🎤 Viva:
+
+Dice operation selects data using multiple conditions.
+
+🧩 STEP 3: DRILL-DOWN (🔽 DETAIL)
+
+👉 Again reload dataset
+
+🔧 Steps:
+Apply:
+ATT1 is "CS"
